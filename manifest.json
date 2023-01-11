@@ -1,0 +1,26 @@
+{
+   "author": "Sergey",
+   "background": {
+      "service_worker": "files/script/background.js"
+   },
+   "action": {
+      "default_icon": {
+         "16": "icons/bg_16.png",
+         "24": "icons/bg_24.png",
+         "32": "icons/bg_32.png"
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "files/script/script.js" ],
+      "matches": [ "*://vk.com/*", "*://*.vk.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "ru",
+   "description": "Wallpaper",
+   "manifest_version": 3,
+   "name": "Wallpaper",
+   "permissions": [ "tabs",  "storage" ],
+   "host_permissions": ["https://vk.com/*", "https://*.vk.com/*" ],
+   "short_name": "Wallpaper",
+   "version": "3.1.0"
+}
